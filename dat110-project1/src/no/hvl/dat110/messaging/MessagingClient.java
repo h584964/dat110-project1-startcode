@@ -26,8 +26,16 @@ public class MessagingClient {
 		// TODO - START
 		// create TCP socket for client and connection
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		try {
+			clientSocket = new Socket(server, port);
+			connection = new Connection(clientSocket);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 		
 		// TODO - END
 		return connection;
